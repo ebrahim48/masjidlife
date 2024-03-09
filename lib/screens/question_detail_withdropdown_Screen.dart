@@ -26,28 +26,29 @@ class QuestionDetailWithDropdownScreen extends StatelessWidget {
                 ),
               ),
             );
-          } else {
-            return Padding(
-              padding: EdgeInsets.all(16.0),
-              child: DropdownButton<String>(
-                value: 'Select an option',
-                onChanged: (String? newValue) {
-                  // Handle dropdown value change if needed
-                },
-                items: <String>[
-                  'Select an option',
-                  'Option 1',
-                  'Option 2',
-                  'Option 3',
-                  'Option 4',
-                ].map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
-              ),
-            );
+          } else
+          {
+            // return Padding(
+            //   padding: EdgeInsets.all(16.0),
+            //   child: DropdownButton<String>(
+            //     value: 'Select an option',
+            //     onChanged: (String? newValue) {
+            //
+            //     },
+            //     items: <String>[
+            //       'Select an option',
+            //       'Option 1',
+            //       'Option 2',
+            //       'Option 3',
+            //       'Option 4',
+            //     ].map<DropdownMenuItem<String>>((String value) {
+            //       return DropdownMenuItem<String>(
+            //         value: value,
+            //         child: Text(value),
+            //       );
+            //     }).toList(),
+            //   ),
+            // );
           }
         },
       ),
