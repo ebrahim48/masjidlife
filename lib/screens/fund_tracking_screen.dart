@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:masjidlife_app/screens/help-disable_screen.dart';
 import 'package:masjidlife_app/style/app_color.dart';
 
-import 'all_reports_screen.dart';
 import 'borrowers_list.dart';
-import 'fund_tracking_screen.dart';
+import 'fund_and_loanSummary_Screen.dart';
 
-class BranchScreen extends StatelessWidget {
-  static const String routeName = '/Branch';
-  const BranchScreen({Key? key}) : super(key: key);
+class FundTrackingScreen extends StatelessWidget {
+  static const String routeName = '/Fund Tracking Screen';
+  const FundTrackingScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -540,12 +538,12 @@ class BranchScreen extends StatelessWidget {
                               ),
                               child: GestureDetector(
                                 onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => BorrowersList(),
-                                    ),
-                                  );
+                                  // Navigator.push(
+                                  //   context,
+                                  //   MaterialPageRoute(
+                                  //     builder: (context) => BorrowersList(),
+                                  //   ),
+                                  // );
                                 },
                                 child: Center(
                                   child: Text(
@@ -606,23 +604,13 @@ class BranchScreen extends StatelessWidget {
                                   width: 0.1,
                                 ),
                               ),
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => HelpDisableScreen(),
-                                    ),
-                                  );
-                                },
-                                child: Center(
-                                  child: Text(
-                                    'Branch Management Team',
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      color: AppColor().appLightGreen,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                              child: Center(
+                                child: Text(
+                                  'Branch Management Team',
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: AppColor().appLightGreen,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
@@ -643,23 +631,13 @@ class BranchScreen extends StatelessWidget {
                                   width: 0.1,
                                 ),
                               ),
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => FundTrackingScreen(),
-                                    ),
-                                  );
-                                },
-                                child: Center(
-                                  child: Text(
-                                    'Branch Documents',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: AppColor().appLightGreen,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                              child: Center(
+                                child: Text(
+                                  'Branch Documents',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: AppColor().appLightGreen,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
@@ -684,13 +662,23 @@ class BranchScreen extends StatelessWidget {
                                   width: 0.1,
                                 ),
                               ),
-                              child: Center(
-                                child: Text(
-                                  'Branch Loan Resulation',
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    color: AppColor().appLightGreen,
-                                    fontWeight: FontWeight.bold,
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => FundandLoanSummaryScreen(),
+                                    ),
+                                  );
+                                },
+                                child: Center(
+                                  child: Text(
+                                    'Branch Loan Resulation',
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      color: AppColor().appLightGreen,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -741,23 +729,13 @@ class BranchScreen extends StatelessWidget {
                                   width: 0.1,
                                 ),
                               ),
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => AllReportsScreen(),
-                                    ),
-                                  );
-                                },
-                                child: Center(
-                                  child: Text(
-                                    'Report',
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      color: AppColor().appLightGreen,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                              child: Center(
+                                child: Text(
+                                  'Report',
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: AppColor().appLightGreen,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),

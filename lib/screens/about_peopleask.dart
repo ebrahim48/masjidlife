@@ -90,13 +90,10 @@ class About_Peopleask extends StatelessWidget {
                 );
               },),
           ),
-
-
         ],
       ),
     );
   }
-
   Widget _buildhader(BuildContext context) {
     return Column(children: [
       TextView(
@@ -110,7 +107,6 @@ class About_Peopleask extends StatelessWidget {
       _buildfunderinfo(context),
     ]);
   }
-
   Widget _buildfunderinfo(BuildContext context) {
     return Column(
       children: [
@@ -182,6 +178,7 @@ class About_Peopleask extends StatelessWidget {
 class ButtonText extends StatelessWidget {
   final String title;
   final VoidCallback? OnTap;
+
 
   const ButtonText({
     super.key,
