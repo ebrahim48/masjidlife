@@ -26,22 +26,24 @@ class ProductComponent extends StatelessWidget {
             ),
           ),
         ),
-        GridView.builder(
-          shrinkWrap: true,
-          physics: const AlwaysScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-              childAspectRatio: 0.8,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 24,
-            ),
-            itemBuilder: (context,index){
-            return CategoryCard(
-             category: categoryList[index],
-            );
-            },
-          itemCount: categoryList.length,
-            ),
+        Card(
+          child: GridView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                childAspectRatio: 0.8,
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 24,
+              ),
+              itemBuilder: (context,index){
+              return CategoryCard(
+               category: categoryList[index],
+              );
+              },
+            itemCount: categoryList.length,
+              ),
+        ),
       ],
     );
   }

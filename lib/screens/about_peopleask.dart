@@ -128,7 +128,7 @@ class About_Peopleask extends StatelessWidget {
                   decoration: ShapeDecoration(
                     image: DecorationImage(
                       image: NetworkImage(
-                          "https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png"),
+                          "https://upload.wikimedia.org/wikipedia/en/b/b1/portrait_placeholder.png"),
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(

@@ -13,16 +13,36 @@ class BorrowersList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(),
+      appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.search, color: Colors.green,),
+            tooltip: 'Search Icon',
+            onPressed: () {
+
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.menu, color: Colors.green,),
+            tooltip: 'Menu Icon',
+            onPressed: () {
+
+            },
+          ),
+        ],
+        backgroundColor: AppColor().appGreen,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.green, size: 24,),
+          tooltip: 'Arrow Icon',
+          onPressed: () {
+
+          },
+        ),
+      ),
       body: _BuildBody(context),
     );
   }
 
-  AppBar _buildAppBar() {
-    return AppBar(
-      title: const Text("Borrowers List"),
-    );
-  }
   Widget _BuildBody(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(AppValues.halfPadding),

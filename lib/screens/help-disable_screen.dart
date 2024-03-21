@@ -148,12 +148,9 @@ class _HelpDisableScreenState extends State<HelpDisableScreen> {
                     childAspectRatio: 0.5,
                   ),
                   itemCount: 2,
-                  // shrinkWrap: true,
-                  // physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (_, index) {
                     return GestureDetector(
                       onTap: () {
-
                       },
                       child: Container(
                         // width: 200,
