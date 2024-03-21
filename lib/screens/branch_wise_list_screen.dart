@@ -3,10 +3,7 @@ import 'package:masjidlife_app/models/branchwise_model.dart';
 import 'package:masjidlife_app/screens/under_privillaged_screen.dart';
 import 'package:masjidlife_app/style/app_color.dart';
 import '../app_values.dart';
-import '../models/borrowers_model.dart';
 import '../widget/text_view_widget.dart';
-import 'BorrowersProfile.dart';
-
 
 
 class BranchWiseListScreen extends StatelessWidget {
@@ -257,7 +254,6 @@ class BranchWiseListScreen extends StatelessWidget {
       ),
     );
   }
-
 
   Widget _buildBranchInfo(BuildContext context) {
     return  Container(

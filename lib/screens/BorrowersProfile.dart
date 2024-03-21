@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masjidlife_app/style/app_color.dart';
 import '../app_values.dart';
-import '../models/borrowers_model.dart';
 import '../models/borrowersprofile_model.dart';
 import '../widget/text_view_widget.dart';
 
@@ -11,14 +10,33 @@ class BorrowersProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(),
-      body: _BuildBody(context),
-    );
-  }
-  AppBar _buildAppBar() {
-    return AppBar(
-      title: const Text("Borrowers Profile"),
+      appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.search, color: Colors.green,),
+            tooltip: 'Search Icon',
+            onPressed: () {
 
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.menu, color: Colors.green,),
+            tooltip: 'Menu Icon',
+            onPressed: () {
+
+            },
+          ),
+        ],
+        backgroundColor: AppColor().appGreen,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.green, size: 24,),
+          tooltip: 'Arrow Icon',
+          onPressed: () {
+
+          },
+        ),
+      ),
+      body: _BuildBody(context),
     );
   }
   Widget _BuildBody(BuildContext context) {
@@ -27,8 +45,9 @@ class BorrowersProfile extends StatelessWidget {
       child: Column(
         children: [
           _buildHeader(context),
-          _buildDonorInfo(context),
+          _buildBorrowersInfo(context),
           _buildBorrowersList(context),
+          _buildborrowersLoan(context),
         ],
       ),
     );
@@ -42,7 +61,6 @@ class BorrowersProfile extends StatelessWidget {
         _borrowersLoanSummary(context),
         _borrowersTableProfile(context),
         _borrowersTransactions(context),
-        _borrowersLoan(context),
 
       ],
     );
@@ -68,7 +86,7 @@ class BorrowersProfile extends StatelessWidget {
                   decoration: ShapeDecoration(
                     image: DecorationImage(
                       image: NetworkImage(
-                          "https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png"),
+                          "https://upload.wikimedia.org/wikipedia/en/b/b1/portrait_placeholder.png"),
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(
@@ -279,7 +297,7 @@ class BorrowersProfile extends StatelessWidget {
   }
 
 
-  Widget _buildDonorInfo(BuildContext context) {
+  Widget _buildBorrowersInfo(BuildContext context) {
     return  Container(
       padding: const EdgeInsets.all(AppValues.halfPadding),
       margin: const EdgeInsets.symmetric(vertical: AppValues.padding_4),
@@ -290,7 +308,6 @@ class BorrowersProfile extends StatelessWidget {
       child: borrowersInfoText(context),
     );
   }
-
   Widget _buildBorrowersList(BuildContext context) {
     return Flexible(
       child: ListView.builder(
@@ -301,34 +318,12 @@ class BorrowersProfile extends StatelessWidget {
           return GestureDetector(
               onTap: ()
               {
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) =>  BorrowersProfile()));
+
               },
               child: borrowersListItem(borrower, context));
         },),
     );
 
-  }
-  Widget _borrowersLoan(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.all(5),
-      child: Row(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Running Loan Schedule Details",
-                style: TextStyle(
-                  fontSize: 18,
-                  color: AppColor().appBlack,
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
   }
   Widget borrowersInfoText(BuildContext context) {
     return Center(
@@ -397,8 +392,31 @@ class BorrowersProfile extends StatelessWidget {
     );
   }
 
-}
 
+
+  Widget _buildborrowersLoan(BuildContext context) {
+    return  Padding(
+      padding: const EdgeInsets.all(5),
+      child: Row(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Running Loan Schedule Details",
+                style: TextStyle(
+                  fontSize: 18,
+                  color: AppColor().appBlack,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+}
 
 
 

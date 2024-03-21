@@ -8,4 +8,5 @@ class AppColor{
   final Color appBlack = const Color(0xff414141);
   final Color applowash = const Color(0xffC7C7C7);
   final Color appblue = const Color(0xff0075FF);
+  final Color appskyblue = const Color(0xffCCE9DC);
 }

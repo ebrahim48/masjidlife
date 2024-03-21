@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-class BorrowersWidget extends StatelessWidget {
-  const BorrowersWidget({super.key});
+class borrowersLoan extends StatelessWidget {
+  const borrowersLoan({super.key});
 
   @override
   Widget build(BuildContext context) {
